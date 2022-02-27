@@ -7,6 +7,7 @@ import {
   Titulo,
   RoundButton,
   TituloMenor,
+  StyledLink,
 } from "../styles";
 
 import { FaArrowAltCircleLeft } from "react-icons/fa";
@@ -14,9 +15,11 @@ import { FaArrowAltCircleLeft } from "react-icons/fa";
 function CadastroCliente() {
   return (
     <>
-      <RoundButton>
-        <FaArrowAltCircleLeft />
-      </RoundButton>
+      <StyledLink to="/clientes">
+        <RoundButton>
+          <FaArrowAltCircleLeft />
+        </RoundButton>
+      </StyledLink>
       <Container>
         <Titulo>Cadastro do cliente</Titulo>
         <TituloMenor>Preencha as informações abaixo</TituloMenor>
@@ -25,7 +28,9 @@ function CadastroCliente() {
           <StyledInput placeholder="Nome" />
           <StyledInput type={"number"} placeholder="Telefone" />
           <StyledInput type={"email"} placeholder="Email" />
-          <Button primary>Cadastrar</Button>
+          <StyledLink to="/clientes">
+            <Button primary>Cadastrar</Button>
+          </StyledLink>
         </Formulario>
       </Container>
     </>

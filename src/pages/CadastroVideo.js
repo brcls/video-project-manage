@@ -10,16 +10,19 @@ import {
   StyledLabel,
   StyledTextArea,
   DivData,
+  StyledLink,
 } from "../styles";
 
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 
-function CadastroCliente() {
+function CadastroVideo() {
   return (
     <>
-      <RoundButton>
-        <FaArrowAltCircleLeft />
-      </RoundButton>
+      <StyledLink to="/home">
+        <RoundButton>
+          <FaArrowAltCircleLeft />
+        </RoundButton>
+      </StyledLink>
       <Container>
         <Titulo>Cadastro do vídeo</Titulo>
         <TituloMenor>Preencha as informações abaixo</TituloMenor>
@@ -31,11 +34,13 @@ function CadastroCliente() {
             <StyledLabel>Data de entrega</StyledLabel>
             <StyledInput type={"date"} />
           </DivData>
-          <Button primary>Cadastrar</Button>
+          <StyledLink to="/home">
+            <Button primary>Cadastrar</Button>
+          </StyledLink>
         </Formulario>
       </Container>
     </>
   );
 }
 
-export default CadastroCliente;
+export default CadastroVideo;
