@@ -5,15 +5,13 @@ import {
   Container,
   StyledInput,
   Titulo,
-  TituloMenor,
   StyledLink,
 } from "../styles";
 
 function FormEditarCliente() {
   return (
     <Container>
-      <Titulo>Editar do cliente</Titulo>
-      <TituloMenor>Preencha as informações abaixo</TituloMenor>
+      <Titulo>Editar cliente</Titulo>
       <Formulario>
         <StyledInput type={"number"} placeholder="CNPJ" />
         <StyledInput placeholder="Nome" />

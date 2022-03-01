@@ -40,7 +40,8 @@
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^7.0.4"
+    "husky": "^7.0.4",
+    "json-server": "^0.17.0"
   },
   "config": {
     "commitizen": {

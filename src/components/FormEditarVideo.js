@@ -5,7 +5,6 @@ import {
   Container,
   StyledInput,
   Titulo,
-  TituloMenor,
   StyledLabel,
   StyledTextArea,
   DivData,
@@ -15,7 +14,7 @@ import {
 function FormEditarVideo() {
   return (
       <Container>
-        <Titulo>Editar do vídeo</Titulo>
+        <Titulo>Editar vídeo</Titulo>
         <Formulario>
           <StyledInput placeholder="Título do Vídeo" />
           <StyledTextArea placeholder="Briefing" />

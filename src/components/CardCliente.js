@@ -8,6 +8,7 @@ import {
   StyledDiv,
   StyledDiv2,
   RoundButton,
+  StyledLink,
 } from "../styles";
 
 import { AiFillEdit } from "react-icons/ai";
@@ -28,9 +29,11 @@ function CardCliente({
           <TituloMenor>{EntregaVideo}</TituloMenor>
         </StyledDiv>
         <StyledDiv2>
-          <RoundButton>
-            <AiFillEdit />
-          </RoundButton>
+          <StyledLink to="/editar-video">
+            <RoundButton>
+              <AiFillEdit />
+            </RoundButton>
+          </StyledLink>
         </StyledDiv2>
       </Box2>
       <Box>
