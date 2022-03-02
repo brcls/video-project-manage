@@ -6,7 +6,7 @@ import FormEditarCliente from "../components/FormEditarCliente";
 function EditarCliente() {
   return (
     <>
-      <OutButton />
+      <OutButton onde={"/clientes"}/>
       <FormEditarCliente />
     </>
   );

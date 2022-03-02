@@ -11,7 +11,7 @@ import {
   StyledLink,
 } from "../styles";
 
-import { AiFillEdit } from "react-icons/ai";
+import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 
 function CardVideo({
   TituloDoVideo,
@@ -34,6 +34,9 @@ function CardVideo({
               <AiFillEdit />
             </RoundButton>
           </StyledLink>
+          <RoundButton>
+            <AiFillDelete />
+          </RoundButton>
         </StyledDiv2>
       </Box2>
       <Box>

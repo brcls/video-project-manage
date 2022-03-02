@@ -1,51 +1,35 @@
-import React from "react";
-import { Flex } from "../styles";
-
+import React, { useEffect, useState } from "react";
+import api from "../services/api";
 import CardVideo from "./CardVideo";
 
+import { Flex } from "../styles";
+
 function ListaVideo() {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    try {
+      api.get("http://localhost:3000/video").then(({ data }) => {
+        setVideos(data);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   return (
     <Flex>
-      <CardVideo
-        TituloDoVideo={"Video Teste"}
-        Cliente={"Erick Barcelos Andrade Barcelos"}
-        Telefone={"91 9821-1088"}
-        Entrega={"05/02/2001"}
-        Orcamento={"R$ 10.000,00"}
-        Status={"Pendente"}
-      />
-      <CardVideo
-        TituloDoVideo={"Video Teste"}
-        Cliente={"Erick Barcelos"}
-        Telefone={"91 9821-1088"}
-        Entrega={"05/02/2001"}
-        Orcamento={"R$ 10.000,00"}
-        Status={"Pendente"}
-      />
-      <CardVideo
-        TituloDoVideo={"Video Teste"}
-        Cliente={"Erick Barcelos"}
-        Telefone={"91 9821-1088"}
-        Entrega={"05/02/2001"}
-        Orcamento={"R$ 10.000,00"}
-        Status={"Pendente"}
-      />
-      <CardVideo
-        TituloDoVideo={"Video Teste"}
-        Cliente={"Erick Barcelos Andrade Barcelos"}
-        Telefone={"91 9821-1088"}
-        Entrega={"05/02/2001"}
-        Orcamento={"R$ 10.000,00"}
-        Status={"Pendente"}
-      />
-      <CardVideo
-        TituloDoVideo={"Video Teste"}
-        Cliente={"Erick Barcelos Andrade Barcelos"}
-        Telefone={"91 9821-1088"}
-        Entrega={"05/02/2001"}
-        Orcamento={"R$ 10.000,00"}
-        Status={"Pendente"}
-      />
+      {videos.map((video) => (
+        <CardVideo
+          key={video.id}
+          TituloDoVideo={video.titulo}
+          Cliente={"Erick Barcelos Andrade Barcelos"}
+          Telefone={"91 9821-1088"}
+          Entrega={video.entrega}
+          Orcamento={video.orcamento}
+          Status={video.status}
+        />
+      ))}
     </Flex>
   );
 }

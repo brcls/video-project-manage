@@ -260,7 +260,7 @@ export const StyledDiv2 = styled.div`
   display: flex;
 
   button {
-    margin: 3%;
+    margin: 5px;
     width: 50px;
     height: 50px;
   }

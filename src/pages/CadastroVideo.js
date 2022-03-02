@@ -6,7 +6,7 @@ import FormCadastroVideo from "../components/FormCadastroVideo";
 function CadastroVideo() {
   return (
     <>
-      <OutButton />
+      <OutButton onde={"/home"}/>
       <FormCadastroVideo />
     </>
   );

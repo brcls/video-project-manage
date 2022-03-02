@@ -1,39 +1,18 @@
 {
   "cliente": [
     {
-      "id": 1,
-      "cnpj": "1234567",
+      "cnpj": "111111111111",
       "nome": "Erick Barcelos",
       "telefone": "91984211088",
-      "email": "brcls@usp.br"
+      "email": "petrick_barcelos@hotmail.com",
+      "id": 1
     },
     {
-      "cnpj": "1234567",
+      "cnpj": "3333333333",
       "nome": "Erick Barcelos",
       "telefone": "91984211088",
-      "email": "brcls@usp.br",
+      "email": "petrick_barcelos@hotmail.com",
       "id": 2
-    },
-    {
-      "cnpj": "1234567",
-      "nome": "Erick Barcelos",
-      "telefone": "91984211088",
-      "email": "brcls@usp.br",
-      "id": 3
-    },
-    {
-      "cnpj": "1234567",
-      "nome": "Erick Barcelos",
-      "telefone": "91984211088",
-      "email": "brcls@usp.br",
-      "id": 4
-    },
-    {
-      "cnpj": "1234567",
-      "nome": "Erick Barcelos",
-      "telefone": "91984211088",
-      "email": "brcls@usp.br",
-      "id": 5
     }
   ],
   "video": [
@@ -72,6 +51,24 @@
       "status": "some comment",
       "clienteId": 1,
       "id": 4
+    },
+    {
+      "titulo": "some comment",
+      "briefing": "some comment",
+      "orcamento": "some comment",
+      "entrega": "some comment",
+      "status": "some comment",
+      "clienteId": 1,
+      "id": 5
+    },
+    {
+      "titulo": "some comment",
+      "briefing": "some comment",
+      "orcamento": "some comment",
+      "entrega": "some comment",
+      "status": "some comment",
+      "clienteId": 1,
+      "id": 6
     }
   ],
   "gerente": {
