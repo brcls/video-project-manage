@@ -97,6 +97,7 @@ function ListaCliente() {
                 }
               </Titulo>
               <TituloMenor>
+                Data de entrega:{" "}
                 {
                   videos
                     .filter((video) => video.idCliente === cliente.id)
@@ -129,9 +130,9 @@ function ListaCliente() {
           </Box2>
           <Box>
             <Titulo>{cliente.nome}</Titulo>
-            <TituloMenor>{cliente.telefone}</TituloMenor>
-            <TituloMenor>{cliente.email}</TituloMenor>
-            <TituloMenor>{cliente.cnpj}</TituloMenor>
+            <TituloMenor>Telefone: {cliente.telefone}</TituloMenor>
+            <TituloMenor>E-mail: {cliente.email}</TituloMenor>
+            <TituloMenor>CNPJ: {cliente.cnpj}</TituloMenor>
           </Box>
         </Card>
       ))}

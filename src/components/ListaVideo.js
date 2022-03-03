@@ -116,7 +116,7 @@ function ListaVideo() {
             </Box2>
             <Box>
               <Titulo>{video.titulo}</Titulo>
-              <TituloMenor>Entrega: {video.entrega}</TituloMenor>
+              <TituloMenor>Data de entrega: {video.entrega}</TituloMenor>
               <TituloMenor>Orçamento: R$ {video.orcamento}</TituloMenor>
               <TituloMenor>Status: {video.status}</TituloMenor>
             </Box>
