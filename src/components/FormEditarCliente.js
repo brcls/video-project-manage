@@ -10,7 +10,7 @@ import api from "../services/api";
 import { useNavigate } from "react-router-dom";
 
 function FormEditarCliente() {
-  const [id, setID] = useState(null);
+  const [id, setID] = useState();
   const [cnpj, setCnpj] = useState();
   const [nome, setNome] = useState();
   const [telefone, setTelefone] = useState();

@@ -18,12 +18,22 @@ import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 
 function ListaCliente() {
   const [clientes, setClientes] = useState([]);
+  const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     api
       .get("http://localhost:3000/cliente")
       .then(({ data }) => {
         setClientes(data);
+      })
+      .catch((error) => {
+        alert(error);
+      });
+
+    api
+      .get("http://localhost:3000/video")
+      .then(({ data }) => {
+        setVideos(data);
       })
       .catch((error) => {
         alert(error);
@@ -42,8 +52,8 @@ function ListaCliente() {
   const getData = () => {
     api
       .get("http://localhost:3000/cliente")
-      .then((getData) => {
-        setClientes(getData.data);
+      .then(({ data }) => {
+        setClientes(data);
       })
       .catch((error) => {
         alert(error);
@@ -67,8 +77,44 @@ function ListaCliente() {
         <Card key={cliente.id}>
           <Box2>
             <StyledDiv>
-              <Titulo>teste</Titulo>
-              <TituloMenor>teste</TituloMenor>
+              <Titulo>
+                {
+                  videos
+                    .filter((video) => video.idCliente === cliente.id)
+                    .sort((a, b) =>
+                      a.entrega
+                        .split("/")
+                        .reverse()
+                        .join()
+                        .localeCompare(
+                          b.entrega
+                            .split("/")
+                            .reverse()
+                            .join()
+                        )
+                    )
+                    .map((video) => video.titulo)[0]
+                }
+              </Titulo>
+              <TituloMenor>
+                {
+                  videos
+                    .filter((video) => video.idCliente === cliente.id)
+                    .sort((a, b) =>
+                      a.entrega
+                        .split("/")
+                        .reverse()
+                        .join()
+                        .localeCompare(
+                          b.entrega
+                            .split("/")
+                            .reverse()
+                            .join()
+                        )
+                    )
+                    .map((video) => video.entrega)[0]
+                }
+              </TituloMenor>
             </StyledDiv>
             <StyledDiv2>
               <StyledLink to="/editar-cliente">
