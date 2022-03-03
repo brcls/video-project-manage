@@ -6,7 +6,7 @@ import FormCadastroCliente from "../components/FormCadastroCliente";
 function CadastroCliente() {
   return (
     <>
-      <OutButton />
+      <OutButton onde={"/clientes"}/>
       <FormCadastroCliente />
     </>
   );

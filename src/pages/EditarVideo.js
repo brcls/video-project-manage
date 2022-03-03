@@ -6,7 +6,7 @@ import FormEditarVideo from "../components/FormEditarVideo";
 function EditarVideo() {
   return (
     <>
-      <OutButton />
+      <OutButton onde={"/home"}/>
       <FormEditarVideo />
     </>
   );

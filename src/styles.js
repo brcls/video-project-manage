@@ -260,7 +260,7 @@ export const StyledDiv2 = styled.div`
   display: flex;
 
   button {
-    margin: 3%;
+    margin: 5px;
     width: 50px;
     height: 50px;
   }
@@ -272,4 +272,34 @@ export const Image = styled.img`
   height: 400px;
 `;
 
+export const StyledSelect = styled.select`
+  border-radius: 50px;
+  padding: 10px;
+  border: 0 none;
+  background: #eee;
+  box-shadow: 0px 2px 10px rgba(1, 1, 1, 0.3);
+  width: 80%;
+  margin: 10px 2%;
+  transition: 0.5s;
+  font-size: 15px;
 
+  &:hover {
+    background: #ddd;
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+
+  option {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    
+  }
+
+  option:checked {
+    font-weight: bold;
+    color: #eee;
+    background: #555;
+  }
+  
+`;

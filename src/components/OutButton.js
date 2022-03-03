@@ -3,9 +3,9 @@ import { RoundButton, StyledLink } from "../styles";
 
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 
-function OutButton() {
+function OutButton({onde}) {
   return (
-    <StyledLink to="/home">
+    <StyledLink to={`${onde}`}>
       <RoundButton primary>
         <FaArrowAltCircleLeft />
       </RoundButton>

@@ -8,36 +8,35 @@ import {
   StyledDiv,
   StyledDiv2,
   RoundButton,
+  StyledLink,
 } from "../styles";
 
-import { AiFillEdit } from "react-icons/ai";
+import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 
-function CardCliente({
-  CNPJ,
-  NomeCliente,
-  Telefone,
-  Email,
-  TituloVideoLate,
-  EntregaVideo,
-}) {
+function CardCliente({ cliente }, setData, onDelete) {
   return (
     <Card>
       <Box2>
         <StyledDiv>
-          <Titulo>{TituloVideoLate}</Titulo>
-          <TituloMenor>{EntregaVideo}</TituloMenor>
+          <Titulo>teste</Titulo>
+          <TituloMenor>teste</TituloMenor>
         </StyledDiv>
         <StyledDiv2>
-          <RoundButton>
-            <AiFillEdit />
+          <StyledLink to="/editar-cliente">
+            <RoundButton onClick={() => setData(cliente)}>
+              <AiFillEdit />
+            </RoundButton>
+          </StyledLink>
+          <RoundButton onClick={() => onDelete(cliente.id)}>
+            <AiFillDelete />
           </RoundButton>
         </StyledDiv2>
       </Box2>
       <Box>
-        <Titulo>{NomeCliente}</Titulo>
-        <TituloMenor>{Telefone}</TituloMenor>
-        <TituloMenor>{Email}</TituloMenor>
-        <TituloMenor>{CNPJ}</TituloMenor>
+        <Titulo>{cliente.nome}</Titulo>
+        <TituloMenor>{cliente.telefone}</TituloMenor>
+        <TituloMenor>{cliente.email}</TituloMenor>
+        <TituloMenor>{cliente.cnpj}</TituloMenor>
       </Box>
     </Card>
   );
