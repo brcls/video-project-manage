@@ -17,22 +17,13 @@
   ],
   "video": [
     {
-      "id": 5,
-      "titulo": "video pendente",
-      "briefing": "oiii",
-      "orcamento": "11111111111",
-      "entrega": "2023-02-25",
-      "status": "Concluído",
-      "idCliente": 2
-    },
-    {
-      "titulo": "dsgsd",
-      "briefing": "gdsgds",
-      "orcamento": "32332",
-      "entrega": "2022-04-07",
+      "titulo": "Teste",
+      "briefing": "sdgasg",
+      "orcamento": "21215",
+      "entrega": "2024-03-01",
       "idCliente": 1,
       "status": "pendente",
-      "id": 6
+      "id": 1
     }
   ],
   "gerente": {
