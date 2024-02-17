@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "npx json-server mock/db.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -48,5 +49,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "engines": {
+    "node": "16.20.2",
+    "npm": "8.19.4"
   }
 }
